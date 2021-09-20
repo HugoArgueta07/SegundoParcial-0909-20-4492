@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="Dislplay.js" type="text/javascript"></script>
+    <script src="Calculadora.js" type="text/javascript"></script>
+    <script src="app.js" type="text/javascript" defer></script>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="calculadora">
+            <div class="display">
+                <div id="numero-anterior"></div>
+                <div id="numero-actual"></div>
+            </div>
+            <h3>Científica</h3>
+            <div class="operaciones-avanzadas">
+                <button class="boton-calculadora numero" value="(">(</button>
+                <button class="boton-calculadora numero" value=")">)</button>
+                <button class="boton-calculadora operador" value="sin">sin</button>
+                <button class="boton-calculadora operador" value="cos">cos</button>
+                <button class="boton-calculadora operador" value="tan">tan</button>
+                <button class="boton-calculadora operador" value="raiz">&radic;</button>
+                <button class="boton-calculadora operador" value="potencia">^</button>
+                <button class="boton-calculadora"></button>
+                <button class="boton-calculadora operador" value="percent">%</button>
+                <button class="boton-calculadora"></button>
+                <button class="boton-calculadora operador" value="log">log</button>
+                <button class="boton-calculadora"></button>
+            </div>
+            <h3>Básica</h3>
+            <div class="operaciones-basicas">
+                <div class="teclas-numericas">
+                    <button class="boton-calculadora numero">7</button>
+                    <button class="boton-calculadora numero">8</button>
+                    <button class="boton-calculadora numero">9</button>
+                    <button class="boton-calculadora numero">4</button>
+                    <button class="boton-calculadora numero">5</button>
+                    <button class="boton-calculadora numero">6</button>
+                    <button class="boton-calculadora numero">1</button>
+                    <button class="boton-calculadora numero">2</button>
+                    <button class="boton-calculadora numero">3</button>
+                    <div class="botones-inferiores">
+                    <button class="boton-calculadora numero">0</button>
+                    <button class="boton-calculadora numero">.</button>
+                    </div>
+                </div>
+                <div class="botones-delac">
+                    <button class="boton-del operador" onclick="display.borrar()">DEL</button>
+                    <button class="boton-ac operador" onclick="display.borrarTodo()">AC</button>
+                    <div class="operadores-principales">
+                        <button class="boton-calculadora operador" value="+-">&plusmn;</button>
+                        <button class="boton-calculadora operador" value="sumar">+</button>
+                        <button class="boton-calculadora operador" value="restar">-</button>
+                        <button class="boton-calculadora operador" value="multiplicar">*</button>
+                        <button class="boton-calculadora operador" value="dividir">/</button>
+                        <button class="boton-calculadora operador" value="pi">&pi;</button>
+                        <div class="boton-resultado">
+                            <button class="boton-igual operador" value="igual">=</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="btn-fila">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Datos del alumno
+        </button>
+    </div>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Datos del Alumno</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Carné: <b>0909-20-4492</b>
+                    <br>Nombre completo: <b>Hugo Andreé Argueta Rodas</b>
+                    <br>Fecha y hora de finalizacion: <b>19/09/2021 -- 00:00</b>
+                    <br>Nota esperada segun rendimiento: <b>15pts</b>
+                </p>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
